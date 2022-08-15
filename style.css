@@ -1,5 +1,6 @@
 :root {
     --grid-layout: repeat(1,1fr);
+    --box-bg-color: black;
 }
 
 *,
@@ -13,16 +14,19 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .container {
-    width: 600px;
-    height: 600px;
+    width: 690px;
+    height: 690px;
     background-color: lightblue;
     display: grid;
     grid-template-columns: var(--grid-layout);
     grid-template-rows: var(--grid-layout);
-    gap: 2px;
+    gap: 1px;
 }
 
 .square {
@@ -33,7 +37,7 @@ body {
 }
 
 .hover {
-    background-color: brown;
+    background-color: var(--box-bg-color);
 }
 
 
