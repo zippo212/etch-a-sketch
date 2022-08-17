@@ -1,5 +1,6 @@
 :root {
     --grid-layout: repeat(1,1fr);
+    --bg-color: '';
 }
 
 *,
@@ -7,13 +8,25 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Permanent Marker', cursive;
+}
+
+body {
+    background-image: url(./45908.jpg);
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 4rem;
 }
 
 .box {
     width: 95%;
-    margin: 60px auto;
+    margin: 30px auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .options {
@@ -22,37 +35,39 @@
     height: 600px;
     width: 200px;
     justify-content: space-evenly;
-    background-color: aquamarine;
+    background-color: #FFE64D;
     padding: 15px;
     align-items: center;
+    box-shadow: 10px 10px 10px;
 }
 
-.value {
+.value , .grid-s{
     text-align: center;
-    margin-top: 10px;
 }
 
 .container {
     width: 600px;
     height: 600px;
-    background-color: lightblue;
+    background-color: rgb(223,116,12);
     display: grid;
     grid-template-columns: var(--grid-layout);
     grid-template-rows: var(--grid-layout);
-    padding: 15px;
+    padding: 5px;
+    box-shadow: 10px 10px 10px;
 }
 
 .square {
     width: 100%;
     height: 100%;
-    background-color: white;
-    border: 1px solid rgb(156, 156, 156);
+    background-color: antiquewhite;
+    border-left: 1px solid rgb(156, 156, 156);
+    border-top: 1px solid rgb(156, 156, 156);
 }
 
 
 .slider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 160px;
     height: 10px;
     background: #d3d3d3;
     outline: none;
@@ -81,4 +96,51 @@
     cursor: pointer;
 }
 
+button {
+    background: none;
+    width: 100px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0px 7px #a99933;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5d045;
+}
+
+#rgb {
+    background-image: linear-gradient( to right, 
+    #E7484F,
+    #E7484F 16.65%,
+    #F68B1D 16.65%,
+    #F68B1D 33.3%,
+    #FCED00 33.3%,
+    #FCED00 49.95%,
+    #009E4F 49.95%,
+    #009E4F 66.6%,
+    #00AAC3 66.6%,
+    #00AAC3 83.25%,
+    #732982 83.25%,
+    #732982 100%,
+    #E7484F 100%);
+    animation:slide 9s linear infinite;
+}
+
+@keyframes slide { 
+    to {
+        background-position: 20vw;
+    }
+}
+
+#color {
+    background-color: var(--bg-color);
+}
+
+.active {
+    box-shadow: 0px 2px #a99933;
+    transform: translateY(5px);
+    background-color: #b8a636;
+}
 

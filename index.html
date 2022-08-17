@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch a Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <h1>Etch a sketch</h1>
     <div class="box">
         <div class="options">
+            <button id="black">black</button>
             <button id="rgb">RGB</button>
             <button id="e">Eraser</button>
             <button id="clear">Clear</button>
             <div>
+                <div class="grid-s">Grid size</div>
                 <input type="range" min="1" max="60" value="30" class="slider" id="myRange">
                 <div class="value"></div>
             </div>
